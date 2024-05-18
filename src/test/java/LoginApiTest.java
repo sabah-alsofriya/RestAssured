@@ -48,15 +48,6 @@ public class LoginApiTest {
     @Test
     public void otp() {
 
-        Response GenerateOtpResponse = given()
-                .contentType("multipart/form-data")
-                .multiPart("csrfmiddlewaretoken",  cookieValue )
-                .multiPart("csrfmiddlewaretoken", cookieValue)
-                .multiPart("otp_digit", "111111")
-                .when()
-                .post("/accounts/otp-verification/Rx1JfoEtQXP5bXAJvYt6ue2bmBsCg6IVmEFkIdPGAhnrGXkFkVpzEAR6gxUkqFOG/?action=company_login")
-                .then().log().all().extract().response();
-
         Response otpResponse = given()
                 .contentType("multipart/form-data")
                 .multiPart("csrfmiddlewaretoken",  cookieValue )
