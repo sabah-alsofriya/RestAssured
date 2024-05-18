@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class myDemo {
+public class LoginApiTest {
     static String cookieValue;
     @BeforeTest
     public static void setUp() {
